@@ -15,37 +15,34 @@ import javax.persistence.EntityNotFoundException;
 @Service
 public class PagamentoServiceImpl implements PagamentoService {
     @Autowired
-    private ModelMapper modelMapper;
-    @Autowired
     private PagamentoRepository repository;
     @Override
     public Page<PagamentoDto> obterTodos(Pageable paginacao) {
         return this.repository
                 .findAll(paginacao)
-                .map(p -> this.modelMapper.map(p, PagamentoDto.class));
+                .map(p -> new PagamentoDto(p));
     }
-    Override
+    @Override
     public PagamentoDto obterPorId(Long id) {
         Pagamento pagamento = repository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException());
-
-        return this.modelMapper.map(pagamento, PagamentoDto.class);
+        return new PagamentoDto(pagamento);
     }
-    Override
+    @Override
     public PagamentoDto criarPagamento(PagamentoDto dto) {
-        Pagamento pagamento = this.modelMapper.map(dto, Pagamento.class);
+        Pagamento pagamento = new Pagamento(dto);
         pagamento.setStatus(Status.CRIADO);
         repository.save(pagamento);
-
-        return this.modelMapper.map(pagamento, PagamentoDto.class);
+        return new PagamentoDto(pagamento);
     }
-    Override
+    @Override
     public PagamentoDto atualizarPagamento(Long id, PagamentoDto dto) {
-        Pagamento pagamento = this.modelMapper.map(dto, Pagamento.class);
+        Pagamento pagamento = new Pagamento(dto);
         pagamento.setId(id);
         pagamento = repository.save(pagamento);
-        return this.modelMapper.map(pagamento, PagamentoDto.class);
+        return new PagamentoDto(pagamento);
     }
+    @Override
     public void excluirPagamento(Long id) {
         this.repository.deleteById(id);
     }
