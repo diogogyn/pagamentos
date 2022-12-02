@@ -20,17 +20,6 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Pagamento {
-    public Pagamento(PagamentoDto pagamento){
-        this.id = pagamento.getId();
-        this.valor = pagamento.getValor();
-        this.nome = pagamento.getNome();
-        this.numero = pagamento.getNumero();
-        this.expiracao = pagamento.getExpiracao();
-        this.codigo = pagamento.getCodigo();
-        this.status = pagamento.getStatus();
-        this.formaDePagamentoId = pagamento.getFormaDePagamentoId();
-        this.pedidoId = pagamento.getPedidoId();
-    }
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

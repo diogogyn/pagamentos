@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6def359-9ada-4238-ac53-41ff260ffb64" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dos/pagamentos/dto/PagamentoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dos/pagamentos/dto/PagamentoDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dos/pagamentos/model/Pagamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dos/pagamentos/model/Pagamento.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dos/pagamentos/service/impl/PagamentoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dos/pagamentos/service/impl/PagamentoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dos/pagamentos/dto/PagamentoDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dos/pagamentos/dto/PagamentoDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dos/pagamentos/model/Pagamento.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dos/pagamentos/model/Pagamento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dos/pagamentos/service/impl/PagamentoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dos/pagamentos/service/impl/PagamentoServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +23,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="com.haulmont.jpb.FlywayMigrationScript" />
+        <option value="Class" />
       </list>
     </option>
   </component>

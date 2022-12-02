@@ -5,6 +5,7 @@ import com.dos.pagamentos.enums.Status;
 import com.dos.pagamentos.model.Pagamento;
 import com.dos.pagamentos.repository.PagamentoRepository;
 import com.dos.pagamentos.service.PagamentoService;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -15,32 +16,35 @@ import javax.persistence.EntityNotFoundException;
 @Service
 public class PagamentoServiceImpl implements PagamentoService {
     @Autowired
+    private ModelMapper modelMapper;
+
+    @Autowired
     private PagamentoRepository repository;
     @Override
     public Page<PagamentoDto> obterTodos(Pageable paginacao) {
         return this.repository
                 .findAll(paginacao)
-                .map(p -> new PagamentoDto(p));
+                .map(p -> this.modelMapper.map(p, PagamentoDto.class));
     }
     @Override
     public PagamentoDto obterPorId(Long id) {
-        Pagamento pagamento = repository.findById(id)
+        Pagamento pagamento = this.repository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException());
-        return new PagamentoDto(pagamento);
+        return this.modelMapper.map(pagamento, PagamentoDto.class);
     }
     @Override
     public PagamentoDto criarPagamento(PagamentoDto dto) {
-        Pagamento pagamento = new Pagamento(dto);
+        Pagamento pagamento = this.modelMapper.map(dto, Pagamento.class);
         pagamento.setStatus(Status.CRIADO);
-        repository.save(pagamento);
-        return new PagamentoDto(pagamento);
+        this.repository.save(pagamento);
+        return this.modelMapper.map(pagamento, PagamentoDto.class);
     }
     @Override
     public PagamentoDto atualizarPagamento(Long id, PagamentoDto dto) {
-        Pagamento pagamento = new Pagamento(dto);
+        Pagamento pagamento = this.modelMapper.map(dto, Pagamento.class);
         pagamento.setId(id);
-        pagamento = repository.save(pagamento);
-        return new PagamentoDto(pagamento);
+        pagamento = this.repository.save(pagamento);
+        return this.modelMapper.map(pagamento, PagamentoDto.class);
     }
     @Override
     public void excluirPagamento(Long id) {
