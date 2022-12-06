@@ -1,0 +1,9 @@
+/home/diogo/eclipse-workspace/pagamentos/src/main/java/com/dos/pagamentos/service/impl/PagamentoServiceImpl.java
+/home/diogo/eclipse-workspace/pagamentos/src/main/java/com/dos/pagamentos/repository/PagamentoRepository.java
+/home/diogo/eclipse-workspace/pagamentos/src/main/java/com/dos/pagamentos/dto/PagamentoDto.java
+/home/diogo/eclipse-workspace/pagamentos/src/main/java/com/dos/pagamentos/PagamentosApplication.java
+/home/diogo/eclipse-workspace/pagamentos/src/main/java/com/dos/pagamentos/model/Pagamento.java
+/home/diogo/eclipse-workspace/pagamentos/src/main/java/com/dos/pagamentos/config/Configuracao.java
+/home/diogo/eclipse-workspace/pagamentos/src/main/java/com/dos/pagamentos/service/PagamentoService.java
+/home/diogo/eclipse-workspace/pagamentos/src/main/java/com/dos/pagamentos/enums/Status.java
+/home/diogo/eclipse-workspace/pagamentos/src/main/java/com/dos/pagamentos/controller/PagamentoController.java

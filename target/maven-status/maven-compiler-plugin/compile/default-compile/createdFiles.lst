@@ -1,0 +1,9 @@
+com/dos/pagamentos/enums/Status.class
+com/dos/pagamentos/service/PagamentoService.class
+com/dos/pagamentos/PagamentosApplication.class
+com/dos/pagamentos/model/Pagamento.class
+com/dos/pagamentos/config/Configuracao.class
+com/dos/pagamentos/repository/PagamentoRepository.class
+com/dos/pagamentos/dto/PagamentoDto.class
+com/dos/pagamentos/controller/PagamentoController.class
+com/dos/pagamentos/service/impl/PagamentoServiceImpl.class

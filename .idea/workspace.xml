@@ -6,12 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f6def359-9ada-4238-ac53-41ff260ffb64" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dos/pagamentos/dto/PagamentoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dos/pagamentos/dto/PagamentoDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dos/pagamentos/model/Pagamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dos/pagamentos/model/Pagamento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dos/pagamentos/service/impl/PagamentoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dos/pagamentos/service/impl/PagamentoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dos/pagamentos/dto/PagamentoDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dos/pagamentos/dto/PagamentoDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dos/pagamentos/model/Pagamento.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dos/pagamentos/model/Pagamento.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dos/pagamentos/service/impl/PagamentoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dos/pagamentos/service/impl/PagamentoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pagamentos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/pagamentos.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dos/pagamentos/PagamentosApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dos/pagamentos/PagamentosApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dos/pagamentos/PagamentosApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dos/pagamentos/PagamentosApplication.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,20 +32,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JpbToolWindowState">
-    <option name="myId2FirstActivated">
-      <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
-      </map>
-    </option>
-    <option name="myId2Visible">
-      <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
-      </map>
-    </option>
+    <option name="isToolWindowVisible" value="false" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
