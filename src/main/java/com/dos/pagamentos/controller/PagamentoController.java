@@ -2,6 +2,7 @@ package com.dos.pagamentos.controller;
 
 import com.dos.pagamentos.dto.PagamentoDto;
 import com.dos.pagamentos.service.PagamentoService;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -39,12 +40,22 @@ public class PagamentoController {
     }
     @PutMapping("/{id}")
     public ResponseEntity<PagamentoDto> atualizar(@PathVariable @NotNull Long id, @RequestBody @Valid PagamentoDto dto) {
-        PagamentoDto atualizado = service.atualizarPagamento(id, dto);
+        PagamentoDto atualizado = this.service.atualizarPagamento(id, dto);
         return ResponseEntity.ok(atualizado);
     }
     @DeleteMapping("/{id}")
     public ResponseEntity<PagamentoDto> remover(@PathVariable @NotNull Long id) {
-        service.excluirPagamento(id);
+        this.service.excluirPagamento(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @PatchMapping("/{id}/confirmar")
+    @CircuitBreaker(name = "atualizaPedido", fallbackMethod = "pagamentoAutorizadoComIntegracaoPendente")
+    public void confirmarPagamento(@PathVariable @NotNull Long id){
+        this.service.confirmarPagamento(id);
+    }
+
+    public void pagamentoAutorizadoComIntegracaoPendente(Long id, Exception e){
+        this.service.alteraStatus(id);
     }
 }

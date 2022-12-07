@@ -10,4 +10,7 @@ public interface PagamentoService {
     public PagamentoDto criarPagamento(PagamentoDto dto);
     public PagamentoDto atualizarPagamento(Long id, PagamentoDto dto);
     public void excluirPagamento(Long id);
+    public void confirmarPagamento(Long id);
+
+    void alteraStatus(Long id);
 }

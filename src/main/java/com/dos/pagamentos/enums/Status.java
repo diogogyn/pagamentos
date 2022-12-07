@@ -3,5 +3,6 @@ package com.dos.pagamentos.enums;
 public enum Status {
     CRIADO,
     CONFIRMADO,
-    CANCELADO
+    CANCELADO,
+    CONFIRMADO_SEM_INTEGRACAO
 }
